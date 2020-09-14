@@ -5,21 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import {HelloWorldService} from './hello-world.service';
+import {ArticleService} from './services/articles.service';
 
-import { HomepageComponent } from './homepage/homepage.component'
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomepageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HelloWorldService],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

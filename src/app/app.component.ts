@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HelloWorldService} from './hello-world.service';
+import {ArticleService} from './services/articles.service';
 import {IArticle} from './article'
 
 @Component({
@@ -14,11 +14,10 @@ export class AppComponent implements OnInit {
 
   articles: IArticle[];
 
-  constructor(private hw: HelloWorldService) {}
-  
+  constructor(private hw: ArticleService) {}
+
   ngOnInit() {
-    
-    console.log("Inside Init")
+  
     this.hw.getTitle()
       .subscribe(data => this.articles = data)
 

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {environment} from '../environments/environment';
+import {environment} from '../../environments/environment';
 import { Observable } from 'rxjs';
-import {IArticle} from './article';
+import {IArticle} from './../article';
 
 interface Article {
   title: string;
@@ -11,7 +11,7 @@ interface Article {
 }
 
 @Injectable()
-export class HelloWorldService {
+export class ArticleService {
 
   private _url: string = "http://localhost:4201/api/v1/article"
 
