@@ -1,0 +1,14 @@
+<h2>{{title}}</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Desc</th>
+    <th>Content</th>
+  </tr>
+  <tr *ngFor="let article of articles">
+    <td>{{article.title}}</td>
+    <td>{{article.desc}}</td>
+    <td>{{article.content}}</td>
+  </tr>
+</table>
